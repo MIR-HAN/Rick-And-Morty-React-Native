@@ -1,26 +1,26 @@
 import axiosClient from "./instance";
 
 export async function getRequest(URL, params) {
-    const response = await axiosClient.get(`${URL}`, { params })
+    const response = await axiosClient.get(`${URL}`, { params:params })
 
-    return response
+    return response;
 }
 
 export async function postRequest(URL, payload) {
-    const response = await axiosClient.post(`${URL}`, { params })
+    const response = await axiosClient.post(`${URL}`, payload)
 
-    return response
+    return response;
 }
 
 export async function patchRequest(URL, payload) {
-    const response = await axiosClient.get(`${URL}`, { params })
+    const response = await axiosClient.get(`${URL}`, payload)
 
-    return response
+    return response;
 }
 
-export async function deleteRequest(URL, params) {
-    const response = await axiosClient.get(`${URL}`, { params })
+export async function deleteRequest(URL) {
+    const response = await axiosClient.get(`${URL}`, )
 
-    return response
+    return response;
 }
 
