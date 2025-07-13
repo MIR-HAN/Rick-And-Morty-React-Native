@@ -10,7 +10,8 @@ const initialState = {
     params:{
         page:1,
         status:null,
-        gender:null
+        gender:null,
+        name:null
     }
 };
 
@@ -71,12 +72,14 @@ const characterReducer = (state = initialState, action) => {
                    }
                    
                 };
-                case LOAD_MORE_DATA:
+                case LOAD_MORE_DATA: {
+                    const combined = [...state.characterList, ...action.payload];
+                    const unique = Array.from(new Map(combined.map(item => [item.id, item])).values());
                     return {
-                        ...state,
-                      characterList:[...state.characterList,...action.payload],
-                    
+                      ...state,
+                      characterList: unique,
                     };
+                  }
     
         
         default:

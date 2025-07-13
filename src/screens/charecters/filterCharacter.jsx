@@ -18,8 +18,6 @@ const FilterCharacters = () => {
 
 
   const filterCharacters = ()=>{
-    
-
     navigation.goBack()
 
   }

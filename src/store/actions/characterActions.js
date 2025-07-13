@@ -18,7 +18,7 @@ export const getCharacterList = (params) => {
                 payload: response.data.results, 
             });
         } catch (error) {
-            console.error("Error fetching characters:", error || "succed");
+        
             dispatch({
                 type: CHARACTER_REJECT,
                 payload: error?.response?.data?.message || error.message || "An error occurred",

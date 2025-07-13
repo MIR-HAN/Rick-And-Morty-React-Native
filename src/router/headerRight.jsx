@@ -6,7 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 import { FILTERCHARACTER, SEARCHCHARACTER } from '../utils/routes';
 
 
-
 const HeadreRight = () => {
 
   const navigation =useNavigation()

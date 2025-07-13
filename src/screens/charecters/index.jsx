@@ -34,9 +34,9 @@ const Characters = () => {
           <Spinner /> :
           <FlatList
             data={characterList}
-            renderItem={({ item }) => (
+            keyExtractor={(item, index) => `${item.id}-${index}`}
+            renderItem={({ item}) => (
               <CharactersCard item={item} />
-
 
             )}
             onEndReachedTreshold={0.5}
